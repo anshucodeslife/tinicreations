@@ -21,8 +21,8 @@
 
 //           <div className="flex items-start gap-4">
 //             <Phone className="text-amber-400" size={26}/>
-//             <a href="tel:+918693860500" className="hover:text-amber-400">
-//               +91 86938 60500
+//             <a href="tel:+919833753123" className="hover:text-amber-400">
+//               +91 98337 53123
 //             </a>
 //           </div>
 
@@ -73,7 +73,7 @@ const Contact = () => {
     const whatsappMessage = `Hello Tini Creations 👋,%0A%0AMy name is *${name}* (%20${email}).%0A%0A${message}%0A%0A— Sent via Website Contact Form`;
 
     // Your WhatsApp number (with country code, no spaces or + signs in URL)
-    const phoneNumber = "918693860500";
+    const phoneNumber = "919833753123";
 
     // Open WhatsApp in new tab/window
     window.open(`https://wa.me/${phoneNumber}?text=${whatsappMessage}`, "_blank");
@@ -92,17 +92,17 @@ const Contact = () => {
             <div className="flex items-start gap-4">
               <Mail className="text-amber-400" size={26} />
               <a
-                href="mailto:contact@tinicreation.com"
+                href="mailto:contact@tinicreations.com"
                 className="hover:text-amber-400"
               >
-                contact@tinicreation.com
+                contact@tinicreations.com
               </a>
             </div>
 
             <div className="flex items-start gap-4">
               <Phone className="text-amber-400" size={26} />
-              <a href="tel:+918693860500" className="hover:text-amber-400">
-                +91 86938 60500
+              <a href="tel:+919833753123" className="hover:text-amber-400">
+                +91 98337 53123
               </a>
             </div>
 

@@ -543,8 +543,8 @@ const TiniCreations = () => {
                       </div>
                       <div>
                         <h3 className="font-bold text-lg mb-2">Email Us</h3>
-                        <a href="mailto:contact@tinicreation.com" className="text-amber-400 hover:text-amber-300 text-lg">
-                          contact@tinicreation.com
+                        <a href="mailto:contact@tinicreations.com" className="text-amber-400 hover:text-amber-300 text-lg">
+                          contact@tinicreations.com
                         </a>
                       </div>
                     </div>
@@ -557,8 +557,8 @@ const TiniCreations = () => {
                       </div>
                       <div>
                         <h3 className="font-bold text-lg mb-2">Call Us</h3>
-                        <a href="tel:+918693860500" className="text-pink-400 hover:text-pink-300 text-lg">
-                          +91 86938 60500
+                        <a href="tel:+919833753123" className="text-pink-400 hover:text-pink-300 text-lg">
+                          +91 98337 53123
                         </a>
                         <p className="text-gray-400 text-sm mt-1">Mon-Sat, 10AM-7PM IST</p>
                       </div>
