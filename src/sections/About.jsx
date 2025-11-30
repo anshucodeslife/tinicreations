@@ -4,7 +4,7 @@ import founder from "../assets/Prashant-Pandey.png"; // ✅ Remove curly braces
 const About = () => (
   <section id="about" className="py-20 bg-gray-900 text-white">
     <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-      
+
       <div>
         <h2 className="text-4xl font-bold mb-6">About Tini Creations</h2>
 
@@ -25,11 +25,13 @@ const About = () => (
         </a>
       </div>
 
-      <img
-        src={founder}
-        className="rounded-lg shadow-2xl w-full h-auto object-cover"
-        alt="Founder - Prashant Pandey"
-      />
+      <div className="flex justify-center">
+        <img
+          src={founder}
+          className="rounded-xl shadow-2xl w-full max-w-[350px] h-auto object-cover border-4 border-gray-800"
+          alt="Founder - Prashant Pandey"
+        />
+      </div>
 
     </div>
   </section>

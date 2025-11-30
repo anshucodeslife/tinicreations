@@ -42,9 +42,7 @@ export default function App() {
         <FadeInSection>
           <Intro />
         </FadeInSection>
-        <FadeInSection>
-          <Gallery onVideoSelect={setSelectedVideo} />
-        </FadeInSection>
+        <Gallery onVideoSelect={setSelectedVideo} />
         <FadeInSection>
           <Process />
         </FadeInSection>
