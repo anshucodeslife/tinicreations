@@ -8,7 +8,7 @@ const LoadFonts = () => {
     document.head.appendChild(link1);
 
     const link2 = document.createElement("link");
-    link2.href = "https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap";
+    link2.href = "https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cinzel:wght@400;500;600;700&display=swap";
     link2.rel = "stylesheet";
     document.head.appendChild(link2);
 

@@ -1,25 +1,29 @@
 import React from "react";
-import logo from "../assets/Logo/logo.png"; // ✅ no curly braces needed
+import logo from "../assets/Logo/logo.png";
 
-const Logo = () => (
-  <a href="#home" className="flex items-center space-x-3">
-    <img
-      src={logo}
-      alt="Tini Creations Logo"
-      className="w-10 h-10 object-contain"
-    />
-    <div className="flex flex-col leading-tight">
-      <span
-        style={{ fontFamily: "'Great Vibes', cursive" }}
-        className="text-3xl text-amber-400"
-      >
-        Tini
-      </span>
-      <span className="text-sm font-light uppercase text-white opacity-90">
-        Creations
-      </span>
-    </div>
-  </a>
+const Logo = ({ isScrolled }) => (
+    <a href="#home" className="flex items-center gap-3 group">
+        <img
+            src={logo}
+            alt="Tini Creations Logo"
+            className="w-12 h-12 object-contain transition-transform duration-300 group-hover:scale-110"
+        />
+        <div className="flex flex-col justify-center">
+            <span
+                style={{ fontFamily: "'Great Vibes', cursive" }}
+                className="text-4xl leading-none text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-500 drop-shadow-sm"
+            >
+                Tini
+            </span>
+            <span
+                style={{ fontFamily: "'Cinzel', serif" }}
+                className={`text-[0.65rem] font-bold uppercase tracking-[0.3em] leading-tight ml-1 transition-colors duration-300 ${isScrolled === false ? "text-black" : "text-gray-200"
+                    }`}
+            >
+                Creations
+            </span>
+        </div>
+    </a>
 );
 
 export default Logo;
