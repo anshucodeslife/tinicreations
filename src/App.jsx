@@ -4,9 +4,10 @@ import Header from "./components/Header";
 import Footer from "./layout/Footer";
 import VideoModal from "./components/VideoModal";
 import FadeInSection from "./components/FadeInSection";
-  import FloatingActions from "./components/FloatingActions";
+import FloatingActions from "./components/FloatingActions";
 import Hero from "./sections/Hero";
 import Intro from "./sections/Intro";
+import Clients from "./sections/Clients";
 import Gallery from "./sections/Gallery";
 import Process from "./sections/Process";
 import Services from "./sections/Services";
@@ -45,6 +46,9 @@ export default function App() {
         <Hero />
         <FadeInSection>
           <Intro />
+        </FadeInSection>
+        <FadeInSection>
+          <Clients />
         </FadeInSection>
         <Gallery onVideoSelect={setSelectedVideo} />
         <FadeInSection>
