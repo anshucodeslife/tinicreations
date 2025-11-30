@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Footer from "./layout/Footer";
 import VideoModal from "./components/VideoModal";
 import FadeInSection from "./components/FadeInSection";
-
+  import FloatingActions from "./components/FloatingActions";
 import Hero from "./sections/Hero";
 import Intro from "./sections/Intro";
 import Gallery from "./sections/Gallery";
@@ -17,7 +17,7 @@ import Journey from "./sections/Journey";
 import Team from "./sections/Team";
 import Testimonials from "./sections/Testimonials";
 import Contact from "./sections/Contact";
-import CustomCursor from "./components/CustomCursor";
+
 
 export default function App() {
   const [selectedVideo, setSelectedVideo] = useState(null);
@@ -33,9 +33,10 @@ export default function App() {
   }, []);
 
 
+
   return (
-    <div className="bg-black cursor-none"> {/* Hide default cursor */}
-      <CustomCursor />
+    <div className="bg-black">
+      <FloatingActions />
       <LoadFonts />
       <Header />
       {/* V1 TiniCreations component */}

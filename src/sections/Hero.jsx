@@ -1,11 +1,22 @@
 import React from "react";
 import heroBg from "../assets/hero-bg-latest.png";
+import heroBgMobile from "../assets/hero-bg-mobile.png";
 
 const Hero = () => (
-  <section id="home" className="relative h-screen flex flex-col justify-center text-white overflow-hidden">
-    {/* Full Background Image */}
+  <section id="home" className="relative h-[100dvh] flex flex-col justify-center text-white overflow-hidden">
+    {/* Mobile Background Image */}
     <div
-      className="absolute inset-0 bg-cover bg-center z-0"
+      className="absolute inset-0 bg-cover bg-[center_top] z-0 md:hidden"
+      style={{
+        backgroundImage: `url(${heroBgMobile})`,
+      }}
+    >
+      <div className="absolute inset-0 bg-black/30"></div>
+    </div>
+
+    {/* Desktop Background Image */}
+    <div
+      className="absolute inset-0 bg-cover bg-center z-0 hidden md:block"
       style={{
         backgroundImage: `url(${heroBg})`,
       }}

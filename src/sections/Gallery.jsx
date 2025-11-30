@@ -29,13 +29,15 @@ const Gallery = () => {
             Our Show Reel
           </h3>
           <div
-            className="relative w-full aspect-video rounded-xl overflow-hidden shadow-2xl border border-gray-800 group"
+            className="relative w-full pt-[56.25%] rounded-xl overflow-hidden shadow-2xl border border-gray-800 group"
             onMouseEnter={() => setIsMainVideoMuted(false)}
             onMouseLeave={() => setIsMainVideoMuted(true)}
           >
             <iframe
-              className="w-full h-full object-cover"
-              src={`https://www.youtube.com/embed/${mainVideoId}?autoplay=1&mute=${isMainVideoMuted ? 1 : 0}&controls=0&loop=1&playlist=${mainVideoId}&rel=0&modestbranding=1`}
+              className="absolute top-0 left-0 w-full h-full"
+              width="100%"
+              height="100%"
+              src={`https://www.youtube.com/embed/${mainVideoId}?autoplay=1&mute=${isMainVideoMuted ? 1 : 0}&controls=0&loop=1&playlist=${mainVideoId}&rel=0&modestbranding=1&playsinline=1`}
               title="Our Show Reel"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -61,11 +63,13 @@ const Gallery = () => {
             ].map((item) => (
               <div key={item.id} className="flex flex-col gap-4">
                 <div
-                  className="relative w-full aspect-video rounded-lg overflow-hidden shadow-xl border border-gray-800"
+                  className="relative w-full pt-[56.25%] rounded-lg overflow-hidden shadow-xl border border-gray-800"
                 >
                   <iframe
-                    className="w-full h-full object-cover"
-                    src={`https://www.youtube.com/embed/${item.videoId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${item.videoId}&rel=0&modestbranding=1`}
+                    className="absolute top-0 left-0 w-full h-full"
+                    width="100%"
+                    height="100%"
+                    src={`https://www.youtube.com/embed/${item.videoId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${item.videoId}&rel=0&modestbranding=1&playsinline=1`}
                     title={item.title}
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -150,14 +154,16 @@ const Gallery = () => {
             {["YEpwC0A7jfQ", "GB_KQJ19HaA", "TV4fzsMJFg0", "M1B72D5QNk4"].map((shortId, index) => (
               <div
                 key={shortId}
-                className="relative w-full aspect-[9/16] rounded-[2rem] overflow-hidden shadow-2xl border-8 border-gray-800 bg-black"
+                className="relative w-full pt-[177.77%] rounded-[2rem] overflow-hidden shadow-2xl border-8 border-gray-800 bg-black"
               >
                 {/* Phone Notch/Header decoration */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-6 bg-gray-800 rounded-b-xl z-10"></div>
 
                 <iframe
-                  className="w-full h-full object-cover"
-                  src={`https://www.youtube.com/embed/${shortId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${shortId}&rel=0&modestbranding=1`}
+                  className="absolute top-0 left-0 w-full h-full"
+                  width="100%"
+                  height="100%"
+                  src={`https://www.youtube.com/embed/${shortId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${shortId}&rel=0&modestbranding=1&playsinline=1`}
                   title={`Short ${index + 1}`}
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
