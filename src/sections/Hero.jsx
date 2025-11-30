@@ -1,6 +1,6 @@
 import React from "react";
-import heroBg from "../assets/hero-bg-latest.png";
-import heroBgMobile from "../assets/hero-bg-mobile.png";
+import heroBg from "../assets/hero-bg-desktop-v2.png";
+import heroBgMobile from "../assets/hero-bg-mobile-v2.png";
 
 const Hero = () => (
   <section id="home" className="relative h-[100dvh] flex flex-col justify-center text-white overflow-hidden">
@@ -25,7 +25,7 @@ const Hero = () => (
     </div>
 
     {/* Content Container */}
-    <div className="relative z-20 px-6 md:px-12 max-w-7xl mx-auto w-full pt-20">
+    <div className="relative z-20 px-6 md:px-12 max-w-7xl mx-auto w-full pt-20 pb-24">
       <div className="max-w-4xl">
         <h2 className="text-xl md:text-2xl font-semibold mb-4 text-amber-100 tracking-wide">
           Tini Creations

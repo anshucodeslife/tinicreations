@@ -16,20 +16,20 @@ const Gallery = () => {
   ];
 
   return (
-    <section id="gallery" className="py-20 bg-gray-900 text-white">
+    <section id="gallery" className="pt-20 pb-32 bg-white text-gray-900 relative z-40">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-4">Our Gallery</h2>
-        <p className="text-xl text-center text-gray-400 mb-12">
+        <p className="text-xl text-center text-gray-600 mb-12">
           We create visuals that speak louder than words.
         </p>
 
         {/* Main Featured Video - Our Show Reel */}
         <div className="mb-12">
-          <h3 className="text-3xl font-bold text-center mb-8 text-transparent bg-clip-text bg-gradient-to-r from-amber-200 to-yellow-500">
+          <h3 className="text-3xl font-bold text-center mb-8 text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-yellow-600">
             Our Show Reel
           </h3>
           <div
-            className="relative w-full pt-[56.25%] rounded-xl overflow-hidden shadow-2xl border border-gray-800 group"
+            className="relative w-full pt-[56.25%] rounded-xl overflow-hidden shadow-2xl border border-gray-200 group"
             onMouseEnter={() => setIsMainVideoMuted(false)}
             onMouseLeave={() => setIsMainVideoMuted(true)}
           >
@@ -52,7 +52,7 @@ const Gallery = () => {
 
         {/* Commercial Ads Section */}
         <div className="mb-16">
-          <h3 className="text-3xl font-bold text-center mb-8 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-600">
+          <h3 className="text-3xl font-bold text-center mb-8 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-700">
             TV Commercials
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -63,7 +63,7 @@ const Gallery = () => {
             ].map((item) => (
               <div key={item.id} className="flex flex-col gap-4">
                 <div
-                  className="relative w-full pt-[56.25%] rounded-lg overflow-hidden shadow-xl border border-gray-800"
+                  className="relative w-full pt-[56.25%] rounded-lg overflow-hidden shadow-xl border border-gray-200"
                 >
                   <iframe
                     className="absolute top-0 left-0 w-full h-full"
@@ -79,12 +79,12 @@ const Gallery = () => {
                 </div>
                 <div className="flex items-center gap-3 px-2">
                   {/* Logo Image */}
-                  <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center overflow-hidden border border-gray-600 shadow-inner p-1">
+                  <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center overflow-hidden border border-gray-200 shadow-sm p-1">
                     <img src={item.logo} alt={item.brand} className="w-full h-full object-contain" />
                   </div>
                   <div>
-                    <h4 className="text-lg font-bold text-white leading-tight">{item.brand}</h4>
-                    <p className="text-xs text-gray-400 uppercase tracking-wider">TV Commercial</p>
+                    <h4 className="text-lg font-bold text-gray-900 leading-tight">{item.brand}</h4>
+                    <p className="text-xs text-gray-500 uppercase tracking-wider">TV Commercial</p>
                   </div>
                 </div>
               </div>
@@ -94,18 +94,20 @@ const Gallery = () => {
 
         {/* Grid Videos - Our Influencer Brand IG Horizontal Post */}
         <div className="mb-16">
-          <h3 className="text-3xl font-bold text-center mb-8 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+          <h3 className="text-3xl font-bold text-center mb-8 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-700">
             Our Influencer Brand IG Horizontal Post
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
             {gridVideos.map((item) => (
               <div
                 key={item.id}
-                className="relative w-full aspect-video rounded-lg overflow-hidden shadow-xl border border-gray-800"
+                className="relative w-full pt-[56.25%] rounded-lg overflow-hidden shadow-xl border border-gray-200"
               >
                 <iframe
-                  className="w-full h-full object-cover"
-                  src={`https://www.youtube.com/embed/${item.videoId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${item.videoId}&rel=0&modestbranding=1`}
+                  className="absolute top-0 left-0 w-full h-full"
+                  width="100%"
+                  height="100%"
+                  src={`https://www.youtube.com/embed/${item.videoId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${item.videoId}&rel=0&modestbranding=1&playsinline=1`}
                   title={item.title}
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -119,7 +121,7 @@ const Gallery = () => {
 
         {/* Influencer & Brand Integration Section */}
         <div className="mb-16">
-          <h3 className="text-3xl font-bold text-center mb-8 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-600">
+          <h3 className="text-3xl font-bold text-center mb-8 text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-700">
             Influencer & Brand Integration
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
@@ -129,11 +131,13 @@ const Gallery = () => {
             ].map((item) => (
               <div
                 key={item.id}
-                className="relative w-full aspect-video rounded-lg overflow-hidden shadow-xl border border-gray-800"
+                className="relative w-full pt-[56.25%] rounded-lg overflow-hidden shadow-xl border border-gray-200"
               >
                 <iframe
-                  className="w-full h-full object-cover"
-                  src={`https://www.youtube.com/embed/${item.videoId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${item.videoId}&rel=0&modestbranding=1`}
+                  className="absolute top-0 left-0 w-full h-full"
+                  width="100%"
+                  height="100%"
+                  src={`https://www.youtube.com/embed/${item.videoId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${item.videoId}&rel=0&modestbranding=1&playsinline=1`}
                   title={item.title}
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -147,7 +151,7 @@ const Gallery = () => {
 
         {/* YouTube Shorts Section */}
         <div className="mt-20">
-          <h3 className="text-3xl font-bold text-center mb-8 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-600">
+          <h3 className="text-3xl font-bold text-center mb-8 text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-700">
             Vertical Ad Films
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -174,6 +178,22 @@ const Gallery = () => {
             ))}
           </div>
         </div>
+      </div>
+
+      {/* Bottom Wave Divider */}
+      <div className="absolute bottom-[-1px] left-0 w-full overflow-hidden leading-[0]">
+        <svg
+          className="relative block w-full h-[50px] sm:h-[100px]"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1440 320"
+          preserveAspectRatio="none"
+        >
+          <path
+            fill="#000000"
+            fillOpacity="1"
+            d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,224C672,245,768,267,864,261.3C960,256,1056,224,1152,202.7C1248,181,1344,171,1392,165.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+          ></path>
+        </svg>
       </div>
     </section>
   );

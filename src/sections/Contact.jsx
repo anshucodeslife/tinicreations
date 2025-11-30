@@ -80,34 +80,34 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-900 text-white">
+    <section id="contact" className="py-20 bg-white text-gray-900">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-4">Get In Touch</h2>
-        <p className="text-center text-gray-400 mb-12 text-lg">
+        <p className="text-center text-gray-600 mb-12 text-lg">
           We’d love to discuss your next project.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-6">
             <div className="flex items-start gap-4">
-              <Mail className="text-amber-400" size={26} />
+              <Mail className="text-amber-600" size={26} />
               <a
                 href="mailto:contact@tinicreations.com"
-                className="hover:text-amber-400"
+                className="hover:text-amber-600 transition-colors"
               >
                 contact@tinicreations.com
               </a>
             </div>
 
             <div className="flex items-start gap-4">
-              <Phone className="text-amber-400" size={26} />
-              <a href="tel:+919833753123" className="hover:text-amber-400">
+              <Phone className="text-amber-600" size={26} />
+              <a href="tel:+919833753123" className="hover:text-amber-600 transition-colors">
                 +91 98337 53123
               </a>
             </div>
 
             <div className="flex items-start gap-4">
-              <MapPin className="text-amber-400" size={26} />
+              <MapPin className="text-amber-600" size={26} />
               <span>Mumbai, India</span>
             </div>
           </div>
@@ -119,7 +119,7 @@ const Contact = () => {
               placeholder="Your Name"
               value={formData.name}
               onChange={handleChange}
-              className="w-full bg-gray-800 p-3 rounded-lg border border-gray-700"
+              className="w-full bg-gray-50 p-3 rounded-lg border border-gray-300 focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none transition-all"
             />
             <input
               required
@@ -128,7 +128,7 @@ const Contact = () => {
               placeholder="Your Email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full bg-gray-800 p-3 rounded-lg border border-gray-700"
+              className="w-full bg-gray-50 p-3 rounded-lg border border-gray-300 focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none transition-all"
             />
             <textarea
               required
@@ -137,12 +137,12 @@ const Contact = () => {
               placeholder="Your Message"
               value={formData.message}
               onChange={handleChange}
-              className="w-full bg-gray-800 p-3 rounded-lg border border-gray-700"
+              className="w-full bg-gray-50 p-3 rounded-lg border border-gray-300 focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none transition-all"
             ></textarea>
 
             <button
               type="submit"
-              className="w-full bg-amber-500 text-black py-3 rounded-lg font-semibold hover:bg-amber-400 transition"
+              className="w-full bg-amber-500 text-white py-3 rounded-lg font-semibold hover:bg-amber-600 transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
               Send via WhatsApp
             </button>

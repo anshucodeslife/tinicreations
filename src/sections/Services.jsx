@@ -11,17 +11,37 @@ const services = [
 ];
 
 const Services = () => (
-  <section id="services" className="py-20 bg-gray-900 text-white">
-    <div className="max-w-7xl mx-auto px-4">
-      <h2 className="text-4xl font-bold text-center mb-4">Our Services</h2>
-      <p className="text-xl text-center text-gray-400 mb-12">Full-stack production solutions.</p>
+  <section id="services" className="py-24 bg-gradient-to-br from-gray-950 via-gray-900 to-black text-white relative overflow-hidden">
+    {/* Subtle Creative Gradient Overlay */}
+    <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-amber-500/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+    <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
+
+    <div className="max-w-7xl mx-auto px-4 relative z-10">
+      <h2 className="text-4xl font-bold text-center mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
+        Our Services
+      </h2>
+      <p className="text-xl text-center text-gray-400 mb-16 max-w-2xl mx-auto">
+        Full-stack production solutions tailored for impact.
+      </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {services.map(item => (
-          <div key={item.title} className="bg-gray-800 p-8 rounded-lg hover:bg-black border border-gray-700 hover:border-amber-400 transition shadow-lg">
-            <item.icon size={50} className="text-amber-400 mb-6" />
-            <h3 className="text-2xl font-semibold mb-3">{item.title}</h3>
-            <p className="text-gray-400">{item.desc}</p>
+        {services.map((item) => (
+          <div
+            key={item.title}
+            className="group bg-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-800 hover:border-amber-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-amber-900/10 hover:-translate-y-1"
+          >
+            <div className="w-14 h-14 bg-gray-800 rounded-xl flex items-center justify-center mb-6 group-hover:bg-amber-500/10 transition-colors duration-300">
+              <item.icon
+                size={32}
+                className="text-gray-300 group-hover:text-amber-400 transition-colors duration-300"
+              />
+            </div>
+            <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-amber-500 transition-colors duration-300">
+              {item.title}
+            </h3>
+            <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
+              {item.desc}
+            </p>
           </div>
         ))}
       </div>
