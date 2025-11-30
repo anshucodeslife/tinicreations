@@ -17,6 +17,7 @@ import Journey from "./sections/Journey";
 import Team from "./sections/Team";
 import Testimonials from "./sections/Testimonials";
 import Contact from "./sections/Contact";
+import CustomCursor from "./components/CustomCursor";
 
 export default function App() {
   const [selectedVideo, setSelectedVideo] = useState(null);
@@ -31,8 +32,10 @@ export default function App() {
     });
   }, []);
 
+
   return (
-    <div className="bg-black">
+    <div className="bg-black cursor-none"> {/* Hide default cursor */}
+      <CustomCursor />
       <LoadFonts />
       <Header />
       {/* V1 TiniCreations component */}
