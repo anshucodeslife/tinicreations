@@ -30,6 +30,7 @@ const About = () => (
           src={founder}
           className="rounded-xl shadow-2xl w-full max-w-[350px] h-auto object-cover border-4 border-gray-800"
           alt="Founder - Prashant Pandey"
+          loading="lazy"
         />
       </div>
 

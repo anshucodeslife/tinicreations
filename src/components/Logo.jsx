@@ -6,7 +6,7 @@ const Logo = ({ isScrolled }) => (
         <img
             src={logo}
             alt="Tini Creations Logo"
-            className="w-12 h-12 object-contain transition-transform duration-300 group-hover:scale-110"
+            className="w-12 h-12 object-contain transition-transform duration-300 md:group-hover:scale-110"
         />
         <div className="flex flex-col justify-center">
             <span

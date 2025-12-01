@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
+import VideoCard from "../components/VideoCard";
 import gaanaLogo from "../assets/gaana-logo.png";
 import happnLogo from "../assets/happn-logo.png";
 import inacanLogo from "../assets/inacan-logo.png";
 
 const Gallery = () => {
-  const [isMainVideoMuted, setIsMainVideoMuted] = useState(true);
-
   // Video IDs
   const mainVideoId = "ouJasJT4dXI";
   const gridVideos = [
@@ -28,26 +27,11 @@ const Gallery = () => {
           <h3 className="text-3xl font-bold text-center mb-8 text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-yellow-600">
             Our Show Reel
           </h3>
-          <div
-            className="relative w-full pt-[56.25%] rounded-xl overflow-hidden shadow-2xl border border-gray-200 group"
-            onMouseEnter={() => setIsMainVideoMuted(false)}
-            onMouseLeave={() => setIsMainVideoMuted(true)}
-          >
-            <iframe
-              className="absolute top-0 left-0 w-full h-full"
-              width="100%"
-              height="100%"
-              src={`https://www.youtube.com/embed/${mainVideoId}?autoplay=1&mute=${isMainVideoMuted ? 1 : 0}&controls=0&loop=1&playlist=${mainVideoId}&rel=0&modestbranding=1&playsinline=1`}
-              title="Our Show Reel"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              style={{ pointerEvents: "none" }} // Prevent direct interaction with iframe to ensure hover works on wrapper
-            ></iframe>
-            <div className="absolute bottom-4 right-4 bg-black/50 px-3 py-1 rounded text-sm text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-              {isMainVideoMuted ? "Hover to Unmute" : "Sound On"}
-            </div>
-          </div>
+          <VideoCard
+            videoId={mainVideoId}
+            title="Our Show Reel"
+            className="w-full pt-[56.25%] rounded-xl shadow-2xl border border-gray-200"
+          />
         </div>
 
         {/* Commercial Ads Section */}
@@ -62,21 +46,11 @@ const Gallery = () => {
               { id: "comm3", videoId: "ar7zn8c9N1w", title: "IN A CAN", brand: "IN A CAN", logo: inacanLogo },
             ].map((item) => (
               <div key={item.id} className="flex flex-col gap-4">
-                <div
-                  className="relative w-full pt-[56.25%] rounded-lg overflow-hidden shadow-xl border border-gray-200"
-                >
-                  <iframe
-                    className="absolute top-0 left-0 w-full h-full"
-                    width="100%"
-                    height="100%"
-                    src={`https://www.youtube.com/embed/${item.videoId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${item.videoId}&rel=0&modestbranding=1&playsinline=1`}
-                    title={item.title}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    style={{ pointerEvents: "none" }}
-                  ></iframe>
-                </div>
+                <VideoCard
+                  videoId={item.videoId}
+                  title={item.title}
+                  className="w-full pt-[56.25%] rounded-lg shadow-xl border border-gray-200"
+                />
                 <div className="flex items-center gap-3 px-2">
                   {/* Logo Image */}
                   <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center overflow-hidden border border-gray-200 shadow-sm p-1">
@@ -99,22 +73,12 @@ const Gallery = () => {
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
             {gridVideos.map((item) => (
-              <div
+              <VideoCard
                 key={item.id}
-                className="relative w-full pt-[56.25%] rounded-lg overflow-hidden shadow-xl border border-gray-200"
-              >
-                <iframe
-                  className="absolute top-0 left-0 w-full h-full"
-                  width="100%"
-                  height="100%"
-                  src={`https://www.youtube.com/embed/${item.videoId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${item.videoId}&rel=0&modestbranding=1&playsinline=1`}
-                  title={item.title}
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  style={{ pointerEvents: "none" }}
-                ></iframe>
-              </div>
+                videoId={item.videoId}
+                title={item.title}
+                className="w-full pt-[56.25%] rounded-lg shadow-xl border border-gray-200"
+              />
             ))}
           </div>
         </div>
@@ -129,22 +93,12 @@ const Gallery = () => {
               { id: "inf1", videoId: "u22Cc3mtR3o", title: "Influencer Integration 1" },
               { id: "inf2", videoId: "kvj-GvxfPOw", title: "Influencer Integration 2" },
             ].map((item) => (
-              <div
+              <VideoCard
                 key={item.id}
-                className="relative w-full pt-[56.25%] rounded-lg overflow-hidden shadow-xl border border-gray-200"
-              >
-                <iframe
-                  className="absolute top-0 left-0 w-full h-full"
-                  width="100%"
-                  height="100%"
-                  src={`https://www.youtube.com/embed/${item.videoId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${item.videoId}&rel=0&modestbranding=1&playsinline=1`}
-                  title={item.title}
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  style={{ pointerEvents: "none" }}
-                ></iframe>
-              </div>
+                videoId={item.videoId}
+                title={item.title}
+                className="w-full pt-[56.25%] rounded-lg shadow-xl border border-gray-200"
+              />
             ))}
           </div>
         </div>
@@ -156,26 +110,15 @@ const Gallery = () => {
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {["YEpwC0A7jfQ", "GB_KQJ19HaA", "TV4fzsMJFg0", "M1B72D5QNk4"].map((shortId, index) => (
-              <div
+              <VideoCard
                 key={shortId}
-                className="relative w-full pt-[177.77%] rounded-[2rem] overflow-hidden shadow-2xl border-8 border-gray-800 bg-black"
+                videoId={shortId}
+                title={`Short ${index + 1}`}
+                className="w-full pt-[177.77%] rounded-[2rem] shadow-2xl border-8 border-gray-800 bg-black"
               >
                 {/* Phone Notch/Header decoration */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-6 bg-gray-800 rounded-b-xl z-10"></div>
-
-                <iframe
-                  className="absolute top-0 left-0 w-full h-full"
-                  width="100%"
-                  height="100%"
-                  src={`https://www.youtube.com/embed/${shortId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${shortId}&rel=0&modestbranding=1&playsinline=1`}
-                  title={`Short ${index + 1}`}
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  loading="lazy"
-                  style={{ pointerEvents: "none" }}
-                ></iframe>
-              </div>
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-6 bg-gray-800 rounded-b-xl z-20 pointer-events-none"></div>
+              </VideoCard>
             ))}
           </div>
         </div>

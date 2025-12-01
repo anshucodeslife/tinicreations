@@ -245,7 +245,7 @@ const TiniCreations = () => {
             ].map((stat, i) => (
               <div 
                 key={i}
-                className="group relative p-6 bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 hover:border-amber-400/50 transition-all hover:scale-110"
+                className="group relative p-6 bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 hover:border-amber-400/50 transition-all md:hover:scale-110"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-500/20 to-pink-500/20 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <div className="relative z-10">
@@ -277,18 +277,18 @@ const TiniCreations = () => {
               <div className="relative grid grid-cols-2 gap-4">
                 <div className="space-y-4">
                   <div className="aspect-square rounded-3xl overflow-hidden border-4 border-amber-500/30">
-                    <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=400&h=400&fit=crop" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" alt="" />
+                    <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=400&h=400&fit=crop" className="w-full h-full object-cover md:hover:scale-110 transition-transform duration-700" alt="" />
                   </div>
                   <div className="aspect-square rounded-3xl overflow-hidden border-4 border-pink-500/30">
-                    <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=400&h=400&fit=crop" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" alt="" />
+                    <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=400&h=400&fit=crop" className="w-full h-full object-cover md:hover:scale-110 transition-transform duration-700" alt="" />
                   </div>
                 </div>
                 <div className="space-y-4 pt-8">
                   <div className="aspect-square rounded-3xl overflow-hidden border-4 border-purple-500/30">
-                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=400&fit=crop" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" alt="" />
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=400&fit=crop" className="w-full h-full object-cover md:hover:scale-110 transition-transform duration-700" alt="" />
                   </div>
                   <div className="aspect-square rounded-3xl overflow-hidden border-4 border-blue-500/30">
-                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&h=400&fit=crop" className="w-full h-full object-cover hover:scale-110 transition-transform duration-700" alt="" />
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&h=400&fit=crop" className="w-full h-full object-cover md:hover:scale-110 transition-transform duration-700" alt="" />
                   </div>
                 </div>
               </div>
@@ -363,7 +363,7 @@ const TiniCreations = () => {
                 <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-20 rounded-3xl transition-opacity`}></div>
                 
                 <div className="relative z-10">
-                  <div className={`inline-flex p-4 bg-gradient-to-br ${service.color} rounded-2xl mb-6 group-hover:scale-110 transition-transform`}>
+                  <div className={`inline-flex p-4 bg-gradient-to-br ${service.color} rounded-2xl mb-6 md:group-hover:scale-110 transition-transform`}>
                     {service.icon}
                   </div>
                   
@@ -434,7 +434,7 @@ const TiniCreations = () => {
                   <img 
                     src={item.thumbnail}
                     alt={item.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-110"
                   />
                   
                   <div className={`absolute inset-0 bg-gradient-to-t ${item.color} opacity-60 group-hover:opacity-90 transition-opacity`}></div>
@@ -459,7 +459,7 @@ const TiniCreations = () => {
                             <span>{item.stats.engagement}</span>
                           </div>
                         </div>
-                        <button className="w-12 h-12 bg-white text-black rounded-full flex items-center justify-center hover:scale-110 transition-transform">
+                        <button className="w-12 h-12 bg-white text-black rounded-full flex items-center justify-center md:hover:scale-110 transition-transform">
                           <Play className="w-5 h-5" />
                         </button>
                       </div>
@@ -494,7 +494,7 @@ const TiniCreations = () => {
                   <div className="flex flex-col items-center">
                     <div className="relative mb-6">
                       <div className="absolute inset-0 bg-gradient-to-r from-amber-500 to-pink-500 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                      <div className="relative w-24 h-24 bg-gradient-to-br from-amber-500 to-pink-500 rounded-full flex items-center justify-center text-3xl font-black group-hover:scale-110 transition-transform">
+                      <div className="relative w-24 h-24 bg-gradient-to-br from-amber-500 to-pink-500 rounded-full flex items-center justify-center text-3xl font-black md:group-hover:scale-110 transition-transform">
                         {step.icon}
                       </div>
                     </div>
@@ -538,7 +538,7 @@ const TiniCreations = () => {
                 <div className="space-y-8">
                   <div className="group">
                     <div className="flex items-start space-x-4 p-6 bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 hover:border-amber-400/50 transition-all">
-                      <div className="w-14 h-14 bg-gradient-to-br from-amber-500 to-pink-500 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                      <div className="w-14 h-14 bg-gradient-to-br from-amber-500 to-pink-500 rounded-2xl flex items-center justify-center flex-shrink-0 md:group-hover:scale-110 transition-transform">
                         <Mail className="w-6 h-6" />
                       </div>
                       <div>
@@ -552,7 +552,7 @@ const TiniCreations = () => {
 
                   <div className="group">
                     <div className="flex items-start space-x-4 p-6 bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 hover:border-pink-400/50 transition-all">
-                      <div className="w-14 h-14 bg-gradient-to-br from-pink-500 to-purple-500 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                      <div className="w-14 h-14 bg-gradient-to-br from-pink-500 to-purple-500 rounded-2xl flex items-center justify-center flex-shrink-0 md:group-hover:scale-110 transition-transform">
                         <Phone className="w-6 h-6" />
                       </div>
                       <div>
@@ -567,7 +567,7 @@ const TiniCreations = () => {
 
                   <div className="group">
                     <div className="flex items-start space-x-4 p-6 bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 hover:border-purple-400/50 transition-all">
-                      <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                      <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl flex items-center justify-center flex-shrink-0 md:group-hover:scale-110 transition-transform">
                         <MapPin className="w-6 h-6" />
                       </div>
                       <div>
@@ -595,7 +595,7 @@ const TiniCreations = () => {
                           aria-label={social.label}
                         >
                           <div className={`absolute inset-0 bg-gradient-to-r ${social.color} rounded-2xl blur-xl opacity-0 group-hover/social:opacity-100 transition-opacity`}></div>
-                          <div className={`relative w-14 h-14 bg-gradient-to-r ${social.color} rounded-2xl flex items-center justify-center group-hover/social:scale-110 transition-transform`}>
+                          <div className={`relative w-14 h-14 bg-gradient-to-r ${social.color} rounded-2xl flex items-center justify-center md:group-hover/social:scale-110 transition-transform`}>
                             {social.icon}
                           </div>
                         </a>
@@ -797,7 +797,7 @@ const TiniCreations = () => {
         className="fixed bottom-8 right-8 z-50 group"
       >
         <div className="absolute inset-0 bg-gradient-to-r from-amber-500 to-pink-500 rounded-full blur-xl opacity-75 group-hover:opacity-100 transition-opacity animate-pulse"></div>
-        <div className="relative w-16 h-16 bg-gradient-to-r from-amber-500 to-pink-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-2xl">
+        <div className="relative w-16 h-16 bg-gradient-to-r from-amber-500 to-pink-500 rounded-full flex items-center justify-center md:group-hover:scale-110 transition-transform shadow-2xl">
           <Mail className="w-7 h-7" />
         </div>
       </a>

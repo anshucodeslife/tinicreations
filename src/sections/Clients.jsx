@@ -62,12 +62,13 @@ const Clients = () => {
                         {[...row1, ...row1].map((brand, index) => (
                             <div
                                 key={`row1-${index}`}
-                                className="flex items-center justify-center mx-8 w-32 h-20 transition-all duration-300 transform hover:scale-110"
+                                className="flex items-center justify-center mx-8 w-32 h-20 transition-all duration-300 transform md:hover:scale-110"
                             >
                                 <img
                                     src={brand.logo}
                                     alt={brand.name}
                                     className="max-w-full max-h-full object-contain"
+                                    loading="lazy"
                                 />
                             </div>
                         ))}
@@ -80,12 +81,13 @@ const Clients = () => {
                         {[...row2, ...row2].map((brand, index) => (
                             <div
                                 key={`row2-${index}`}
-                                className="flex items-center justify-center mx-8 w-32 h-20 transition-all duration-300 transform hover:scale-110"
+                                className="flex items-center justify-center mx-8 w-32 h-20 transition-all duration-300 transform md:hover:scale-110"
                             >
                                 <img
                                     src={brand.logo}
                                     alt={brand.name}
                                     className="max-w-full max-h-full object-contain"
+                                    loading="lazy"
                                 />
                             </div>
                         ))}

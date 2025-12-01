@@ -5,22 +5,24 @@ import heroBgMobile from "../assets/hero-bg-mobile-v2.png";
 const Hero = () => (
   <section id="home" className="relative h-[100dvh] flex flex-col justify-center text-white overflow-hidden">
     {/* Mobile Background Image */}
-    <div
-      className="absolute inset-0 bg-cover bg-[center_top] z-0 md:hidden"
-      style={{
-        backgroundImage: `url(${heroBgMobile})`,
-      }}
-    >
+    <div className="absolute inset-0 z-0 md:hidden">
+      <img
+        src={heroBgMobile}
+        alt="Hero Background"
+        className="w-full h-full object-cover object-[center_top]"
+        fetchPriority="high"
+      />
       <div className="absolute inset-0 bg-black/30"></div>
     </div>
 
     {/* Desktop Background Image */}
-    <div
-      className="absolute inset-0 bg-cover bg-center z-0 hidden md:block"
-      style={{
-        backgroundImage: `url(${heroBg})`,
-      }}
-    >
+    <div className="absolute inset-0 z-0 hidden md:block">
+      <img
+        src={heroBg}
+        alt="Hero Background"
+        className="w-full h-full object-cover object-center"
+        fetchPriority="high"
+      />
       <div className="absolute inset-0 bg-black/40"></div>
     </div>
 
@@ -40,7 +42,7 @@ const Hero = () => (
 
         <a
           href="#gallery"
-          className="inline-block bg-white text-black font-bold py-4 px-10 rounded-full hover:bg-gray-200 transition-transform duration-300 hover:scale-105 shadow-lg"
+          className="inline-block bg-white text-black font-bold py-4 px-10 rounded-full hover:bg-gray-200 transition-transform duration-300 md:hover:scale-105 shadow-lg"
         >
           View Our Gallery
         </a>

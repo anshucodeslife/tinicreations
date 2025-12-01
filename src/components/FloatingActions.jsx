@@ -44,7 +44,7 @@ const FloatingActions = () => {
             {/* Scroll to Top Button (Left) */}
             <button
                 onClick={scrollToTop}
-                className={`fixed bottom-6 left-6 z-50 p-3 rounded-full bg-white text-black shadow-lg transition-all duration-300 hover:bg-gray-200 hover:scale-110 ${showScrollTop ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"
+                className={`fixed bottom-6 left-6 z-50 p-3 rounded-full bg-white text-black shadow-lg transition-all duration-300 hover:bg-gray-200 md:hover:scale-110 ${showScrollTop ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"
                     }`}
                 aria-label="Scroll to top"
             >
@@ -56,7 +56,7 @@ const FloatingActions = () => {
                 href="https://wa.me/919833753123"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-[#25D366] rounded-full shadow-lg transition-transform duration-300 hover:scale-110 animate-bounce-slow"
+                className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-[#25D366] rounded-full shadow-lg transition-transform duration-300 md:hover:scale-110 animate-bounce-slow"
                 aria-label="Chat on WhatsApp"
             >
                 {/* Pulsing Effect Ring */}
