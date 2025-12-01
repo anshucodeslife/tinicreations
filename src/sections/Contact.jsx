@@ -113,36 +113,42 @@ const Contact = () => {
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
-            <input
-              required
-              name="name"
-              placeholder="Your Name"
-              value={formData.name}
-              onChange={handleChange}
-              className="w-full bg-gray-50 p-3 rounded-lg border border-gray-300 focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none transition-all"
-            />
-            <input
-              required
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              value={formData.email}
-              onChange={handleChange}
-              className="w-full bg-gray-50 p-3 rounded-lg border border-gray-300 focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none transition-all"
-            />
-            <textarea
-              required
-              name="message"
-              rows="5"
-              placeholder="Your Message"
-              value={formData.message}
-              onChange={handleChange}
-              className="w-full bg-gray-50 p-3 rounded-lg border border-gray-300 focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none transition-all"
-            ></textarea>
+            <div className="group">
+              <input
+                required
+                name="name"
+                placeholder="Your Name"
+                value={formData.name}
+                onChange={handleChange}
+                className="w-full bg-gray-50 p-4 rounded-xl border border-gray-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all duration-300 placeholder:text-gray-400"
+              />
+            </div>
+            <div className="group">
+              <input
+                required
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                value={formData.email}
+                onChange={handleChange}
+                className="w-full bg-gray-50 p-4 rounded-xl border border-gray-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all duration-300 placeholder:text-gray-400"
+              />
+            </div>
+            <div className="group">
+              <textarea
+                required
+                name="message"
+                rows="5"
+                placeholder="Your Message"
+                value={formData.message}
+                onChange={handleChange}
+                className="w-full bg-gray-50 p-4 rounded-xl border border-gray-200 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 outline-none transition-all duration-300 placeholder:text-gray-400 resize-none"
+              ></textarea>
+            </div>
 
             <button
               type="submit"
-              className="w-full bg-amber-500 text-white py-3 rounded-lg font-semibold hover:bg-amber-600 transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              className="w-full bg-gradient-to-r from-amber-500 to-amber-600 text-white py-4 rounded-xl font-bold text-lg hover:from-amber-600 hover:to-amber-700 transition-all duration-300 shadow-lg hover:shadow-amber-500/30 transform hover:-translate-y-1"
             >
               Send via WhatsApp
             </button>

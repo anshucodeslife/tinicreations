@@ -1,4 +1,18 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+}
+
+::selection {
+  background-color: #f59e0b; /* amber-500 */
+  color: #000000;
+}
 
 @keyframes scroll-left {
   0% {
